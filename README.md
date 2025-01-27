@@ -22,6 +22,8 @@ Most relevant settings can be configured in `config/settings.py`, including:
 - Number of retrievals for RAG
 - Other RAG parameters
 
+Currently, only one file can be processed at a time. The file path is hardcoded in `main.py`.
+
 ## Usage
 
 Run the main script:
@@ -44,3 +46,4 @@ The system currently:
 - The entire document processing pipeline runs on every execution. This could be optimized to only process new or changed documents.
 - Add functionality to directly compare responses from different models for the same query to better evaluate performance differences.
 - Create a conversational context where previous messages are considered in the current query.
+- Handle multiple documents.
