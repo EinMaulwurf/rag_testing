@@ -13,7 +13,7 @@ def main():
     pipeline = RAGPipeline(vector_store, llm)
     
     # Load documents
-    text = loader.load_file("Documents/Bachelorthesis.pdf")
+    text = loader.load_file("Documents/example.pdf")
     chunks = loader.chunk_text(text, config)
     vector_store.add_documents(chunks)
     

@@ -14,8 +14,8 @@ chroma_db/
 .idea/
 .vscode/
 
-# Documents
-documents/
+# Some speficic documents
+Bachelorthesis.pdf
 
 # Misc
 *.log
