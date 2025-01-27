@@ -3,6 +3,7 @@ from config.settings import Settings
 
 class OpenRouterLLM:
     def __init__(self, config: Settings):
+        self.config = config
         self.client = OpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=config.openrouter_api_key

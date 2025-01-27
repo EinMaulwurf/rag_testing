@@ -5,6 +5,7 @@ from config.settings import Settings
 
 class VectorStore:
     def __init__(self, config: Settings):
+        self.config = config
         self.embeddings = OpenAIEmbeddings(
             model=config.embedding_model,
             openai_api_key=config.openai_api_key
@@ -19,5 +20,6 @@ class VectorStore:
         self.client.add_texts(chunks)
     
     def retrieve(self, query: str) -> list[str]:
-        results = self.client.similarity_search(query, k=self.config.n_retrievals)
+        k = self.config.n_retrievals
+        results = self.client.similarity_search(query, k)
         return [doc.page_content for doc in results]
