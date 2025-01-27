@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+.env
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+
+# Vector DB
+chroma_db/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Documents
+documents/
+
+# Misc
+*.log
