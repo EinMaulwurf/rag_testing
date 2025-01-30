@@ -5,12 +5,20 @@ This project implements a Retrieval-Augmented Generation (RAG) system to enhance
 ## Setup
 
 1. Clone the repository
-2. Create a virtual environment and install dependencies:
+2. Create a virtual environment and install dependencies using either `uv` (recommended) or `pip`:
+
+   Using [uv](https://github.com/astral-sh/uv) this is very straight foreward:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   uv sync
+   ```
+
+   Using pip (alternative):
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    pip install -r requirements.txt
    ```
+
 3. Create a `.env` file based on `.env.example` and add your API keys:
    - OpenRouter API key (for LLM access)
    - OpenAI API key (for embeddings)
@@ -27,6 +35,10 @@ Currently, only one file can be processed at a time. The file path is hardcoded 
 ## Usage
 
 Run the main script:
+```bash
+uv run main.py
+```
+or
 ```bash
 python main.py
 ```
