@@ -1,8 +1,0 @@
-pydantic-settings
-langchain
-langchain_chroma
-langchain_openai
-chromadb
-PyPDF2
-python-dotenv
-openai
